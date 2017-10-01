@@ -16,7 +16,7 @@ namespace GlobalQueryFilter
         {
             //Definindo a cultura de pessoas para filter;
 
-            var culture = CultureInfo.CreateSpecificCulture("en-US");
+            var culture = CultureInfo.CreateSpecificCulture("pt-BR");
 
             //Define a culture em uma Thead
             Thread.CurrentThread.CurrentCulture = culture;
@@ -41,9 +41,11 @@ namespace GlobalQueryFilter
 
                 context.Pessoas.AddRange(new List<Pessoa>()
                 {
+                    //pt-BR
                     new Pessoa(){ID = Guid.NewGuid(), Pais = "pt-BR", Nome = "Junior Porfirio", Excluido = false, WebSite = @"https://medium.com/@juniorporfirio"},
                     new Pessoa(){ID = Guid.NewGuid(), Pais = "pt-BR", Nome = "Renato Groffe", Excluido = false, WebSite = @"https://medium.com/@renato.groffe"},
                     new Pessoa(){ID = Guid.NewGuid(), Pais = "pt-BR", Nome = "Rodolfo Fadino", Excluido = false, WebSite = @"https://rodolfofadino.com.br/"},
+                    //en-US
                     new Pessoa(){ID = Guid.NewGuid(), Pais = "en-US",  Nome = "Scott Hanselman", Excluido = false, WebSite = @"https://www.hanselman.com/"},
                     new Pessoa(){ID = Guid.NewGuid(), Pais = "en-US",  Nome = "Greg Shackles", Excluido = false, WebSite = @"https://gregshackles.com/"}
                 });

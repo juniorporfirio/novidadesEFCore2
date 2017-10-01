@@ -13,7 +13,7 @@ namespace GlobalQueryFilter.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //Recupera o pais da aplicação
-            var culturecountry = Thread.CurrentThread.CurrentUICulture.ToString();
+            var culturecountry = Thread.CurrentThread.CurrentCulture.ToString();
 
             //Realiza o filtro da entidade cliente
             modelBuilder.Entity<Pessoa>().HasQueryFilter(c => c.Pais.Equals(culturecountry) && !c.Excluido);
