@@ -1,2 +1,4 @@
-# novidadesEFCore2
-Principais novidades do Entity Framework Core 2
+# Principais Novidades do Entity Framework Core 2
+Código contendo as principais novidades do Entity Framework Core 2.
+
+- Global Query Filter
