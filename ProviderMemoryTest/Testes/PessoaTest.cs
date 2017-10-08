@@ -11,15 +11,15 @@ namespace ProviderMemoryTest.Testes
         [Fact(DisplayName = "Deve retornar uma pessoa com País igual a pt-BR")]
         public void deve_retornar_uma_pessoa_com_pais_igual_pt_BR()
         {
-            bool any;
+            bool existe;
 
             using (var contexto = Carregar.DadosMemoria())
-            using (var api = new PessoaController(contexto))
+            using (var pessoa = new PessoaController(contexto))
             {
-                var pessoas = api.ComPaisptBR();
-                any = pessoas.Any();
+                var pessoaPTBR = pessoa.comPaisPtBR();
+                existe = pessoaPTBR.Any();
             }
-            Assert.True(any);
+            Assert.True(existe);
 
         }
 
@@ -31,11 +31,12 @@ namespace ProviderMemoryTest.Testes
           
 
             using (var contexto = Carregar.DadosMemoria())
-            using (var api = new PessoaController(contexto))
+            using (var pessoa = new PessoaController(contexto))
             {
-                var pessoa = api.PorNome(nome);
-                Assert.NotNull(pessoa);
-                Assert.NotEmpty(pessoa.Nome);
+                var pessoaporNome = pessoa.porNome(nome);
+
+                Assert.NotNull(pessoaporNome);
+                Assert.NotEmpty(pessoaporNome.Nome);
             }
         }
 

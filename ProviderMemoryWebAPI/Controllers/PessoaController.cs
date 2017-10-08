@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProviderMemoryWebAPI.Contexto;
 using ProviderMemoryWebAPI.Entidades;
+// ReSharper disable InconsistentNaming
 
 namespace ProviderMemoryWebAPI.Controllers
 {
@@ -19,9 +20,9 @@ namespace ProviderMemoryWebAPI.Controllers
 
         }
 
-        [HttpGet]
-        [Route("v1/ptBR")]
-        public ICollection<Pessoa> ComPaisptBR()
+
+        [HttpGet("comPaisPtBR")]
+        public ICollection<Pessoa> comPaisPtBR()
         {
 
             var pessoas = _contexto.Pessoas.AsNoTracking().Where(c => c.Pais.Equals("pt-BR"));
@@ -30,8 +31,8 @@ namespace ProviderMemoryWebAPI.Controllers
         }
 
         [HttpGet]
-        [Route("v1/nome/{nome}")]
-        public Pessoa PorNome(string nome)
+        [Route("comNome/{nome}")]
+        public Pessoa porNome(string nome)
         {
             var pessoas = _contexto.Pessoas.AsNoTracking().FirstOrDefault(c=>c.Nome.Contains(nome));
 

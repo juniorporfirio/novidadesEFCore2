@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProviderMemoryWebAPI.Entidades;
+// ReSharper disable InconsistentNaming
 
 namespace ProviderMemoryWebAPI.Contexto
 {
