@@ -1,13 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GlobalQueryFilter", "GlobalQueryFilter\GlobalQueryFilter.csproj", "{FC3CE08B-22A3-4D24-BDAA-402F619F5193}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProviderMemoryTest", "ProviderMemoryTest\ProviderMemoryTest.csproj", "{AE6CB348-4916-4EB8-B5D4-4EAF42A9E058}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProviderMemoryTest", "ProviderMemoryTest\ProviderMemoryTest.csproj", "{AE6CB348-4916-4EB8-B5D4-4EAF42A9E058}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProviderMemoryWebAPI", "ProviderMemoryWebAPI\ProviderMemoryWebAPI.csproj", "{9ED40739-65D9-4BC4-A80B-ABD6201698CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProviderMemoryWebAPI", "ProviderMemoryWebAPI\ProviderMemoryWebAPI.csproj", "{9ED40739-65D9-4BC4-A80B-ABD6201698CE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MemoryProvider", "MemoryProvider", "{47154172-AF41-4D07-BBE8-2DEEAEE5BF02}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "QueryFilter", "QueryFilter", "{3C5D38EC-DFCB-48EA-AEFE-5A48AB9CC604}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EFFunctionLike", "EFFunctionLike", "{A3265835-59F5-405A-81DE-258DA3641077}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFLikeDemo", "EFLikeDemo\EFLikeDemo.csproj", "{309DE7DA-9518-446D-8E38-CB1FC5B3D103}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,9 +35,19 @@ Global
 		{9ED40739-65D9-4BC4-A80B-ABD6201698CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9ED40739-65D9-4BC4-A80B-ABD6201698CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9ED40739-65D9-4BC4-A80B-ABD6201698CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{309DE7DA-9518-446D-8E38-CB1FC5B3D103}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{309DE7DA-9518-446D-8E38-CB1FC5B3D103}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{309DE7DA-9518-446D-8E38-CB1FC5B3D103}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{309DE7DA-9518-446D-8E38-CB1FC5B3D103}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FC3CE08B-22A3-4D24-BDAA-402F619F5193} = {3C5D38EC-DFCB-48EA-AEFE-5A48AB9CC604}
+		{AE6CB348-4916-4EB8-B5D4-4EAF42A9E058} = {47154172-AF41-4D07-BBE8-2DEEAEE5BF02}
+		{9ED40739-65D9-4BC4-A80B-ABD6201698CE} = {47154172-AF41-4D07-BBE8-2DEEAEE5BF02}
+		{309DE7DA-9518-446D-8E38-CB1FC5B3D103} = {A3265835-59F5-405A-81DE-258DA3641077}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D0CEE590-3724-4FB1-8871-9CBAF9222F73}

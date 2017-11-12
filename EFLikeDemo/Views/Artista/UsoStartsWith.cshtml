@@ -1,0 +1,44 @@
+﻿@model IEnumerable<EFLikeDemo.Models.Artista>
+
+@{
+    ViewData["Title"] = "UsoStartsWith";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Usando StartsWith</h2>
+
+<code>SELECT [c].[ID], [c].[Idade], [c].[Nome], [c].[Sobrenome]
+    FROM [Artistas] AS [c]
+    WHERE ([c].[Sobrenome] LIKE @@__sobrenome_0 + N'%' AND (LEFT([c].[Sobrenome], LEN(@@__sobrenome_0)) = @@__sobrenome_0)) OR (@@__sobrenome_0 = N'')</code>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sobrenome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Idade)
+                </th>
+          
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sobrenome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Idade)
+            </td>
+            
+        </tr>
+}
+    </tbody>
+</table>

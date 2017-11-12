@@ -1,0 +1,45 @@
+﻿@model IEnumerable<EFLikeDemo.Models.Artista>
+
+@{
+    ViewData["Title"] = "UsoEFLike";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Usando a novo recurso EF.Functions.Like vs Contains</h2>
+<code>
+    SELECT [c].[ID], [c].[Idade], [c].[Nome], [c].[Sobrenome]
+    FROM [Artistas] AS [c]
+    WHERE [c].[Sobrenome] LIKE @@__Format_1</code>
+
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sobrenome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Idade)
+                </th>
+          
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sobrenome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Idade)
+            </td>
+           
+        </tr>
+}
+    </tbody>
+</table>
